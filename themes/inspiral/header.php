@@ -11,6 +11,8 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
+    <script type="text/javascript" src="//use.typekit.net/jee6ubp.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <title><?php wp_title(); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
