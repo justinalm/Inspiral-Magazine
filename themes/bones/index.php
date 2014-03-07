@@ -62,8 +62,9 @@
 							<?php endif; ?>
 
 						</div>
-
+<!--
 						<?php get_sidebar(); ?>
+						-->
 
 				</div>
 

@@ -6,6 +6,8 @@
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
 	<head>
+		<script type="text/javascript" src="//use.typekit.net/jee6ubp.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<meta charset="utf-8">
 
 		<?php // Google Chrome Frame for IE ?>

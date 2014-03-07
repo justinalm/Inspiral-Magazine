@@ -16,8 +16,9 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $serif;
+	font-family: $sans-serif;
 	font-size: 100%;
+	font-weight: 300;
 	line-height: 1.5;
 	color: #565656;
 }
@@ -107,7 +108,7 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	font-family: $sans-serif;
 	text-rendering: optimizelegibility;
-	font-weight: 500;
+	font-weight: 700;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -176,7 +177,6 @@ and more scalable.
 			display: block;
 			text-decoration: none;
 			padding: 10px 10px;
-			background-color: #eee;
 			border-bottom: 1px solid #ccc;
 
 			/*
@@ -236,6 +236,10 @@ and more scalable.
 	}  /* end current highlighters */
 
 } /* end .nav */
+
+.nav > ul {
+	margin: 0;
+}
 
 
 /*********************
