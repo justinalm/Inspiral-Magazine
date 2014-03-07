@@ -19,11 +19,9 @@
      
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
      
-		<header>
-            <h2><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'starkers' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+        <h2><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'starkers' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 
-            <?php starkers_posted_on(); ?>
-        </header>
+        <?php starkers_posted_on(); ?>
 
 <?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
             <?php the_excerpt(); ?>
