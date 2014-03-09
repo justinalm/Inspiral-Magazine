@@ -22,7 +22,8 @@ nav.menu-menu-container {
 	float: right;
 	display: inline-block;
 	font-family: $headline-font;
-	font-weight: 100;
+	letter-spacing: 1px;
+	font-weight: 400;
 	text-transform: uppercase;
 	margin: 0;
 }
@@ -46,6 +47,7 @@ ul.menu > li > a {
 	font-size: 0.75em;
 	padding: 24px 36px;
 	border-left: 1px solid rgb(255,255,255);
+	font-weight: 400;
 }
 
 ul.menu > li > a:hover, ul.menu > li > a:active {
@@ -143,13 +145,15 @@ ul.archive-list {
 	text-align: center;
 	font-size: 1.5em;
 	font-family: $headline-font;
-	font-weight: 900;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	line-height: 1;
 }
 
 ul.archive-list > li > a {
 	display: block;
-	padding: 30px 0;
+	padding: 30px 20%;
 	margin: 0;
 	border-bottom: 1px solid rgb(230,230,230);
 }
@@ -185,10 +189,13 @@ nav.next-previous {
 a.styled-button {
 	font-family: $headline-font;
 	text-transform: uppercase;
+	font-weight: 800;
+	line-height: 1.1;
+	letter-spacing: 1px;
 	width: 50%;
 	background: rgb(242, 242, 242);
 	text-align: center;
-	padding: 1em;
+	padding: 1em 3em;
 	margin: 0;
 	box-sizing: border-box;
 	border-left: 1px solid rgb(255,255,255);
@@ -206,4 +213,19 @@ a.styled-button:first-child {
 a.styled-button:last-child {
 	float: right;
 	border-right: 1px solid rgb(214,214,214);
+}
+
+form.searchform {
+	text-align: center;
+	margin: 0 auto 40px auto;
+}
+
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email] {
+	background: rgb(242, 242, 242);
+	padding: 3px 8px;
 }

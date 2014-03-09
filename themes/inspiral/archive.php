@@ -23,7 +23,7 @@ get_header(); ?>
 				wp_reset_query(); ?>
 			</p>
 			<ul class="archive-list">
-			    <?php wp_get_archives('type=alpha');?>
+			    <?php wp_get_archives('type=postbypost&limit=10'); ?>
 			</ul>			
         </section>
 	</article>

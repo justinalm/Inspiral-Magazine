@@ -10,9 +10,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: $headline-font;
 	font-style: normal;
-	font-weight: 900;
+	font-weight: 800;
 	text-transform: uppercase;
 	line-height: 1;
+	letter-spacing: 1px;
 	margin: 0 0 0.15em 0;
 	/* 400 for Normal Weight */
 }
@@ -23,12 +24,16 @@ h1.logo {
 	display: inline-block;
 	font-family: $headline-font;
 	font-style: normal;
-	font-weight: 900;
+	font-weight: 800;
 	font-size: 1.5em;
 	line-height: 1;
 	text-transform: uppercase;
-	padding: 18px;
 	margin: 0;
+}
+
+h1.logo a {
+	display: inline-block;
+	padding: 21px;
 }
 
 h1 {
@@ -52,7 +57,7 @@ h2.author-bio-title {
 }
 
 .date {
-	font-size: 1em;
+	font-size: 1.35em;
 	text-align: center;
 	font-style: italic;
 	margin: 0 auto 40px auto;
@@ -64,7 +69,7 @@ section.banner p.date {
 
 h4.fname {
 	font-size: 1em;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 small {
@@ -96,7 +101,7 @@ blockquote, blockquote.left, blockquote.right {
 .wp-caption-text {
 	font-family: $headline-font;
 	font-style: normal;
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 0.75em;
 	text-align: center;
 	line-height: 1.3;

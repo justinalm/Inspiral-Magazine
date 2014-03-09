@@ -30,12 +30,26 @@
                      );">
                     <div class="banner-text-container">
                         <h1 class="banner"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-                        <p class="date"><?php starkers_posted_on(); ?></p>
+                        <p class="date"><?php starkers_posted_on(); ?></br>
+                        <!-- Tag List -->
+                        <?php
+                            $tags_list = get_the_tag_list( '', ', ' );
+                            if ( $tags_list ):
+                        ?>
+                        <small><?php printf( __( '· %2$s', 'starkers' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
+                        <?php endif; ?>·</small></p>
                     </div>
                 </div>
             <?php else: ?>
                 <h1><?php the_title(); ?></h1>
-                <p class="date"><?php starkers_posted_on(); ?></p>
+                <p class="date"><?php starkers_posted_on(); ?></br>
+                <!-- Tag List -->
+                <?php
+                    $tags_list = get_the_tag_list( '', ', ' );
+                    if ( $tags_list ):
+                ?>
+                <small><?php printf( __( '· %2$s', 'starkers' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
+                <?php endif; ?>·</small></p>
             <?php endif ?>
         </section><!-- End of the Banner -->
 
@@ -61,13 +75,7 @@
                 <?php wp_link_pages( array( 'before' => '<nav>' . __( 'Pages:', 'starkers' ), 'after' => '</nav>' ) ); ?>
             <?php endif; ?>
 
-            <!-- Posted in Category and Leave A Comment -->
-            <?php
-                $tags_list = get_the_tag_list( '', ', ' );
-                if ( $tags_list ):
-            ?>
-            <?php printf( __( 'Tagged %2$s', 'starkers' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?> |
-            <?php endif; ?>
+            <!-- Pagination -->
             <?php /* Display navigation to next/previous pages when applicable */ ?>
             <?php if (  $wp_query->max_num_pages > 1 ) : ?>
             <?php endif; ?>

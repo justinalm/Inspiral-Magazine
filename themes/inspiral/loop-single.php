@@ -23,12 +23,26 @@
                      );">
                     <div class="banner-text-container">
                         <h1 class="banner"><?php the_title(); ?></h1>
-                        <p class="date"><?php starkers_posted_on(); ?></p>
+                        <p class="date"><?php starkers_posted_on(); ?></br>
+                        <!-- Tag List -->
+                        <?php
+                            $tags_list = get_the_tag_list( '', ', ' );
+                            if ( $tags_list ):
+                        ?>
+                        <small><?php printf( __( '· %2$s', 'starkers' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
+                        <?php endif; ?>·</small></p>
                     </div>
                 </div>
             <?php else: ?>
                 <h1><?php the_title(); ?></h1>
-                <p class="date"><?php starkers_posted_on(); ?></p>
+                <p class="date"><?php starkers_posted_on(); ?></br>
+                <!-- Tag List -->
+                <?php
+                    $tags_list = get_the_tag_list( '', ', ' );
+                    if ( $tags_list ):
+                ?>
+                <small><?php printf( __( '· %2$s', 'starkers' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
+                <?php endif; ?>·</small></p>
             <?php endif ?>
         </section><!-- End of the Banner -->
 
@@ -44,7 +58,7 @@
                         <?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'starkers_author_bio_avatar_size', 240 ) ); ?>
                     </div>
                     <div class="author-text">
-                        <h2 class="author-bio-title"><?php printf( esc_attr__( 'About %s', 'starkers' ), get_the_author() ); ?></h2>
+                        <h2 class="author-bio-title"><?php printf( esc_attr__( 'Interview by %s', 'starkers' ), get_the_author() ); ?></h2>
                         <p><?php the_author_meta( 'description' ); ?></p>
                     </div>
                 </div>

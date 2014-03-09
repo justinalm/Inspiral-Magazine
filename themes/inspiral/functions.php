@@ -268,3 +268,11 @@ function posts_link_prev_class($format) {
      return $format;
 }
 add_filter('previous_post_link', 'posts_link_prev_class');
+
+/* Custom Avatars */
+add_filter( 'avatar_defaults', 'newgravatar' );
+function newgravatar ($avatar_defaults) {
+$myavatar = get_bloginfo('template_directory') . '/images/own-gravatar.jpg';
+$avatar_defaults[$myavatar] = "Inspiral Custom";
+return $avatar_defaults;
+}
