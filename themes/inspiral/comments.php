@@ -24,7 +24,7 @@
 
 	<?php /* STARKERS NOTE: The following h3 id is left intact so that comments can be referenced on the page */ ?>
 	<h3><?php
-		printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'starkers' ),
+		printf( _n( 'Responses to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'starkers' ),
 		number_format_i18n( get_comments_number() ), '' . get_the_title() . '' );
 	?></h3>
 

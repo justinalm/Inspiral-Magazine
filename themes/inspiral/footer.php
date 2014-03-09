@@ -8,14 +8,13 @@
  */
 ?>
 	</div> <!-- /#content -->
-
-	<footer id="pageBottom">
-		<?php get_sidebar( 'footer' ); ?>
-
-		<p class="copyright"><small>Copyright &copy; <?php echo date('Y'); ?> by <?php bloginfo( 'name' ); ?>.</small></p>
-	</footer>
-
 </div> <!-- /#wrapper -->
+
+<footer>
+	<p><small>Copyright &copy; <?php echo date('Y'); ?> by <?php bloginfo( 'name' ); ?>.</small></p>
+</footer>
+
 <?php wp_footer(); ?>
+
 </body>
 </html>

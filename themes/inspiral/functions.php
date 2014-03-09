@@ -63,16 +63,15 @@ function starkers_comment( $comment, $args, $depth ) {
 		case '' :
 	?>
 	<article <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
-		<header>
-			<?php echo get_avatar( $comment, 40 ); ?>
-			<h4 class="fname"><?php printf( '%s', get_comment_author_link() ); ?></h4>
+
+		<?php echo get_avatar( $comment, 40 ); ?>
+		<h4 class="fname"><?php printf( '%s', get_comment_author_link() ); ?></h4>
 		
-			<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf( __( '%1$s at %2$s', 'starkers' ), get_comment_date(),  get_comment_time() ); ?></a>
-			<?php edit_comment_link( __( 'Edit', 'starkers' ), ' ' ); ?>
-		</header>
+		<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><p class="date comment-date"><?php printf( __( '%1$s at %2$s', 'starkers' ), get_comment_date(),  get_comment_time() ); ?></p></a>
+		<?php edit_comment_link( __( 'Edit', 'starkers' ), ' ' ); ?>
 
 		<?php if ( $comment->comment_approved == '0' ) : ?>
-			<p class="alert"><?php _e( 'Your comment is awaiting moderation.', 'starkers' ); ?></p>
+		<p class="alert"><?php _e( 'Your comment is awaiting moderation.', 'starkers' ); ?></p>
 		<?php endif; ?>
 
 		<?php comment_text(); ?>
@@ -85,9 +84,7 @@ function starkers_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 	?>
 	<article <?php comment_class(); ?> id="comment-<?php comment_ID() ?>">
-		<header>
-			<?php _e( 'Pingback:', 'starkers' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('Edit', 'starkers'), ' ' ); ?>
-		</header>
+		<?php _e( 'Pingback:', 'starkers' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('Edit', 'starkers'), ' ' ); ?>
 	<?php
 			break;
 	endswitch;
@@ -194,7 +191,7 @@ if ( ! function_exists( 'starkers_posted_on' ) ) :
  * @since Starkers HTML5 3.0
  */
 function starkers_posted_on() {
-	printf( __( 'Posted on %2$s by %3$s', 'starkers' ),
+	printf( __( 'Published %2$s, By %3$s', 'starkers' ),
 		'meta-prep meta-prep-author',
 		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time datetime="%3$s" pubdate>%4$s</time></a>',
 			get_permalink(),
@@ -237,3 +234,37 @@ function starkers_posted_in() {
 	);
 }
 endif;
+
+/* For Helping Attachment Images */
+add_filter( 'the_content', 'attachment_image_link_remove_filter' );
+	function attachment_image_link_remove_filter( $content ) {
+		$content =
+			preg_replace(
+			array('{<a(.*?)(wp-att|wp-content/uploads)[^>]*><img}',
+			'{ wp-image-[0-9]*" /></a>}'),
+			array('<img','" />'),
+		$content
+		);
+	return $content;
+ }
+
+/* Next Previous Post Index Page Styling */
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="styled-button"';
+}
+
+/* Next Previous Post Link Styling */
+function posts_link_next_class($format){
+     $format = str_replace('href=', 'class="styled-button" href=', $format);
+     return $format;
+}
+add_filter('next_post_link', 'posts_link_next_class');
+
+function posts_link_prev_class($format) {
+     $format = str_replace('href=', 'class="styled-button" href=', $format);
+     return $format;
+}
+add_filter('previous_post_link', 'posts_link_prev_class');

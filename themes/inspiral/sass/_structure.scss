@@ -1,25 +1,99 @@
-header, article, aside, footer {
+article, aside, {
 	max-width: 1140px;
-	padding: 0 5%;
+}
+
+article {
+	padding: 0 10% 20px 10%;
 	margin: 0 auto;
 }
 
-.menu {
-	width: auto;
-	margin: 0 auto;
-	display: inline-block;
+article.comment {
+	width: 100%;
+	padding: 0;
+	margin: 1em 0;
 }
 
-.menu > ul {
-	display: inline-block;
-	list-style: none;
-	text-align: center;
+article.comment img {
+	max-width: 40px;
 	padding: 0;
-	margin: 0 auto 1em auto;
 }
 
-.menu > ul > li {
-	padding: 0;
+header, footer {
+	background-color: rgb(242,242,242);
 	margin: 0;
 }
 
+header {
+	margin: 0 0 40px 0;
+	padding: 20px 30px 15px 30px;
+}
+
+footer {
+	text-align: center;
+	padding: 5px 20px;
+	border-top: 1px solid rgb(214,214,214);
+}
+
+nav.menu-menu-container {
+	position: relative;
+	overflow: hidden;
+	font-family: $headline-font;
+	text-transform: uppercase;
+	float: right;
+	margin: 5px 0 0 0;
+}
+
+ul.menu {
+	display: inline-block;
+	margin: 0 auto;
+	list-style: none;
+}
+
+ul.menu {
+	list-style: none;
+	padding: 0;
+	vertical-align: middle;
+}
+
+ul.menu > li {
+	display: inline-block;
+	float: left;
+	padding: 0;
+	margin: 0 20px 0 0;
+}
+
+ul.menu > li:last-child {
+	margin: 0;
+}
+
+nav.next-previous {
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+	margin: 1em 0 0 0;
+	box-sizing: border-box;
+	background: rgb(242, 242, 242);
+	border-top: 1px solid rgb(214,214,214);
+}
+
+a.styled-button {
+	font-family: $headline-font;
+	text-transform: uppercase;
+	width: 50%;
+	background: rgb(242, 242, 242);
+	text-align: center;
+	padding: 1em;
+	margin: 0;
+	box-sizing: border-box;
+	border-left: 1px solid rgb(214,214,214);
+}
+
+a.styled-button:first-child {
+	float: left;
+	border-right: none;
+}
+
+a.styled-button:last-child {
+	float: right;
+	border-right: 1px solid rgb(214,214,214);
+}

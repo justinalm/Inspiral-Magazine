@@ -1,0 +1,66 @@
+img {
+	width: 100%;
+	height: auto;
+}
+
+/* == WordPress WYSIWYG Editor Styles == */
+
+.entry-content img {
+	width: 100%;
+	margin: 0 0 1.5em 0;
+}
+
+.alignleft, img.alignleft {
+	width: 100%;
+	margin-right: 1.5em;
+	display: inline;
+	float: left;
+}
+
+.alignright, img.alignright {
+	width: 100%;
+	margin-left: 1.5em;
+	display: inline;
+	float: right;
+}
+
+.aligncenter, img.aligncenter {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+}
+
+.alignnone, img.alignnone {
+	width: 100%;
+	/* not sure about this one */
+}
+
+.wp-caption img {
+	width: 100%!important;
+	border: 0 none;
+	padding: 0;
+	margin: 1em auto 0 auto;
+}
+
+.wp-caption {
+	max-width: 100% !important;
+	width: 100% !important;
+}
+
+.wp-smiley {
+	margin: 0 !important;
+	max-height: 1em;
+}
+
+.gallery dl {}
+.gallery dt {}
+.gallery dd {}
+.gallery dl a {}
+.gallery dl img {}
+.gallery-caption {}
+
+.size-full, .size-large, .size-medium, .size-thumbnail {
+	width: 100%!important;
+}

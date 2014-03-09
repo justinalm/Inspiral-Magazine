@@ -1,3 +1,11 @@
+$headline-font: "allumi-std", sans-serif;
+
+* {
+	box-sizing: border-box;
+}
+
 @import "normalize";
 @import "typography";
+@import "comments";
+@import "media";
 @import "structure";

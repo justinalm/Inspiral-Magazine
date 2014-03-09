@@ -14,11 +14,11 @@
     <script type="text/javascript" src="//use.typekit.net/jee6ubp.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
-    <title><?php wp_title(); ?></title>
+    <title>Inspiral Magazine <?php wp_title(); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/styles.css" />
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <meta name="viewport" content="width=960">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
      
     <?php
         /* We add some JavaScript to pages with the comment form
