@@ -122,15 +122,21 @@ body { font-family: "garamond-premier-pro",serif; font-style: normal; font-weigh
 
 h1, h2, h3, h4, h5, h6 { font-family: "allumi-std", sans-serif; font-style: normal; font-weight: 900; text-transform: uppercase; line-height: 1; margin: 0 0 0.15em 0; /* 400 for Normal Weight */ }
 
-h1#logo, div#logo { overflow: hidden; font-family: "allumi-std", sans-serif; font-style: normal; font-weight: 900; font-size: 2em; text-align: center; text-transform: uppercase; display: inline-block; padding: 0; margin: 0; line-height: 1; }
+h1.logo { position: relative; float: left; display: inline-block; font-family: "allumi-std", sans-serif; font-style: normal; font-weight: 900; font-size: 1.5em; line-height: 1; text-transform: uppercase; padding: 18px; margin: 0; }
 
-h1, h2 { text-align: center; font-size: 2em; }
+h1 { text-align: center; margin: 40px 0 0.15em 0; }
+
+h1.banner { text-align: center; font-size: 2.75em; padding: 0 20px; margin: 0 auto 0.5em auto; }
+
+h2.author-bio-title { text-align: left; font-size: 1em; margin: 0.5em 0; display: block; }
+
+section.banner p.date { margin: 0 auto 20px auto; }
 
 h4.fname { font-size: 1em; font-weight: 300; }
 
 small { font-size: 70%; }
 
-a, a:visited { color: black; text-decoration: none; }
+a, a:visited { color: black; text-decoration: none; transition: background-color 0.2s ease; }
 
 .date { font-size: 1em; text-align: center; font-style: italic; margin: 0; }
 
@@ -203,33 +209,72 @@ img { width: 100%; height: auto; }
 
 .size-full, .size-large, .size-medium, .size-thumbnail { width: 100% !important; }
 
-article, aside { max-width: 1140px; }
+img.avatar { border-radius: 300px; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
 
-article { padding: 0 10% 20px 10%; margin: 0 auto; }
+header, footer { margin: 0; background: #f2f2f2; }
+
+header { position: relative; overflow: hidden; text-align: center; margin: 0 auto; padding: 0; }
+
+.header-wrapper { display: block; max-width: 1140px; margin: 0 auto; }
+
+nav.menu-menu-container { position: relative; float: right; display: inline-block; font-family: "allumi-std", sans-serif; font-weight: 100; text-transform: uppercase; margin: 0; }
+
+ul.menu { overflow: hidden; float: right; list-style: none; margin: 0; padding: 0; }
+
+ul.menu > li { display: inline-block; float: right; margin: 0; }
+
+ul.menu > li > a { display: inline-block; font-size: 0.75em; padding: 24px 36px; border-left: 1px solid white; }
+
+ul.menu > li > a:hover, ul.menu > li > a:active { background: #e6e6e6; }
+
+ul.menu > li > a:last-child { border-right: 1px solid white; }
+
+ul.menu > li:last-child { margin: 0; }
+
+article { width: 100%; }
+
+section { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+section.banner { max-width: 100% !important; width: 100% !important; padding: 0 !important; }
+
+/* This parent can be any width and height */
+.post-banner { height: 600px; text-align: center; }
+
+/* The ghost, nudged to maintain perfect centering */
+.post-banner:before { content: ''; display: inline-block; height: 100%; vertical-align: middle; margin-right: -0.25em; /* Adjusts for spacing */ }
+
+/* The element to be centered, can also be of any width and height */
+.banner-text-container { color: white; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); display: inline-block; vertical-align: middle; max-width: 960px; margin: 0 auto; }
+
+.banner-text-container a { color: white; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); }
 
 article.comment { width: 100%; padding: 0; margin: 1em 0; }
 
 article.comment img { max-width: 40px; padding: 0; }
 
-header, footer { background-color: #f2f2f2; margin: 0; }
+.post-author { padding: 30px 0 0 0; border-top: 1px solid #e6e6e6; }
 
-header { margin: 0 0 40px 0; padding: 20px 30px 15px 30px; }
+.gravatar { float: left; overflow: hidden; width: 25%; margin: 0 0 20px 0; padding: 0 5% 0 0; }
 
-footer { text-align: center; padding: 5px 20px; border-top: 1px solid #d6d6d6; }
+.author-text { display: inline-block; width: 75%; }
 
-nav.menu-menu-container { position: relative; overflow: hidden; font-family: "allumi-std", sans-serif; text-transform: uppercase; float: right; margin: 5px 0 0 0; }
+ul.archive-list { list-style: none; padding: 0; margin: 40px auto 40px auto; text-align: center; font-size: 1.5em; font-family: "allumi-std", sans-serif; font-weight: 900; line-height: 1; }
 
-ul.menu { display: inline-block; margin: 0 auto; list-style: none; }
+ul.archive-list > li > a { display: block; padding: 30px 0; margin: 0; border-bottom: 1px solid #e6e6e6; }
 
-ul.menu { list-style: none; padding: 0; vertical-align: middle; }
+ul.archive-list > li > a:hover { background: #e6e6e6; }
 
-ul.menu > li { display: inline-block; float: left; padding: 0; margin: 0 20px 0 0; }
+ul.archive-list > li > a:first-child { border-top: 1px solid #e6e6e6; }
 
-ul.menu > li:last-child { margin: 0; }
+ul.archive-list > li > a:last-child { border-bottom: none; }
 
-nav.next-previous { width: 100%; overflow: hidden; padding: 0; margin: 1em 0 0 0; box-sizing: border-box; background: #f2f2f2; border-top: 1px solid #d6d6d6; }
+footer { text-align: center; padding: 5px 20px; border-top: 1px solid white; }
 
-a.styled-button { font-family: "allumi-std", sans-serif; text-transform: uppercase; width: 50%; background: #f2f2f2; text-align: center; padding: 1em; margin: 0; box-sizing: border-box; border-left: 1px solid #d6d6d6; }
+nav.next-previous { width: 100%; overflow: hidden; padding: 0; margin: 1em 0 0 0; box-sizing: border-box; background: #f2f2f2; border-top: 1px solid white; }
+
+a.styled-button { font-family: "allumi-std", sans-serif; text-transform: uppercase; width: 50%; background: #f2f2f2; text-align: center; padding: 1em; margin: 0; box-sizing: border-box; border-left: 1px solid white; }
+
+a.styled-button:hover, a.styled-button:active { background: #e6e6e6; }
 
 a.styled-button:first-child { float: left; border-right: none; }
 

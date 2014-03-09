@@ -44,9 +44,10 @@
 <div id="wrapper">
  
     <header id="pageTop" role="banner">
-        <<?php echo is_front_page() ? 'h1' : 'div'; ?> id="logo"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></<?php echo is_front_page() ? 'h1' : 'div'; ?>>
- 
-        <?php wp_nav_menu( array( 'container'=>'nav', 'container_id'=>'mainNav', 'container_class'=>'', 'theme_location'=>'primary' ) ); ?>
+        <div class="header-wrapper">
+            <h1 class="logo"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+            <?php wp_nav_menu( array( 'container'=>'nav', 'container_id'=>'mainNav', 'container_class'=>'', 'theme_location'=>'primary' ) ); ?>
+        </div><!-- Header-Wrapper -->
     </header>
 
     <div id="content">

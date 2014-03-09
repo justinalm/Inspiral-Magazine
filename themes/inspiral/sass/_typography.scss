@@ -17,23 +17,42 @@ h1, h2, h3, h4, h5, h6 {
 	/* 400 for Normal Weight */
 }
 
-h1#logo, div#logo {
-	overflow: hidden;
+h1.logo {
+	position: relative;
+	float: left;
+	display: inline-block;
 	font-family: $headline-font;
 	font-style: normal;
 	font-weight: 900;
-	font-size: 2em;
-	text-align: center;
-	text-transform: uppercase;
-	display: inline-block;
-	padding: 0;
-	margin: 0;
+	font-size: 1.5em;
 	line-height: 1;
+	text-transform: uppercase;
+	padding: 18px;
+	margin: 0;
 }
 
-h1, h2 {
+h1 {
 	text-align: center;
-	font-size: 2em;
+	margin: 40px 0 0.15em 0;
+}
+
+h1.banner {
+	text-align: center;
+	font-size: 2.75em;
+	padding: 0 20px;
+	margin: 0 auto 0.5em auto;
+}
+
+h2.author-bio-title {
+	text-align: left;
+	font-size: 1em;
+	margin: 0.5em 0;
+	display: block;
+
+}
+
+section.banner p.date {
+	margin: 0 auto 20px auto;
 }
 
 h4.fname {
@@ -48,6 +67,7 @@ small {
 a, a:visited {
 	color: rgb(0,0,0);
 	text-decoration: none;
+	transition: background-color 0.2s ease;
 }
 
 .date {

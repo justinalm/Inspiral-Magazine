@@ -64,3 +64,8 @@ img {
 .size-full, .size-large, .size-medium, .size-thumbnail {
 	width: 100%!important;
 }
+
+img.avatar {
+	border-radius: 300px;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}

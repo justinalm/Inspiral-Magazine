@@ -1,34 +1,31 @@
 <?php
-/**
- * The template for displaying Archive pages.
- *
- * @package WordPress
- * @subpackage Starkers
- * @since Starkers HTML5 3.0
- */
-
+/*
+Template Name: Archives
+*/
 get_header(); ?>
 
-	<?php if ( have_posts() ) the_post(); ?>
+<?php /* If there are no posts to display, such as an empty archive page */ ?>
+<?php if ( ! have_posts() ) : ?>
+    <h2><?php _e( 'Not Found', 'starkers' ); ?></h2>
+    <p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'starkers' ); ?></p>
 
-	<div id="body">
-		<h1>
-		<?php if ( is_day() ) : ?>
-			<?php printf('Daily Archives: %s', get_the_date()); ?>
-		<?php elseif ( is_month() ) : ?>
-			<?php printf('Monthly Archives: %s', get_the_date('F Y')); ?>
-		<?php elseif ( is_year() ) : ?>
-			<?php printf('Yearly Archives: %s', get_the_date('Y')); ?>
-		<?php else : ?>
-			Blog Archives
-		<?php endif; ?>
-		</h1>
+    <?php get_search_form(); ?>
 
-		<?php
-			rewind_posts();
-			get_template_part( 'loop', 'archive' );
-		?>
-	</div>
+<?php endif; ?>
 
-	<?php get_sidebar(); ?>
+    <article>
+        <section>
+			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<p class="date"><?php global
+				$wp_query;
+				$postid = $wp_query->post->ID;
+				echo get_post_meta($postid, 'page_description', true);
+				wp_reset_query(); ?>
+			</p>
+			<ul class="archive-list">
+			    <?php wp_get_archives('type=alpha');?>
+			</ul>			
+        </section>
+	</article>
+
 <?php get_footer(); ?>
