@@ -22,6 +22,7 @@ get_header(); ?>
 				echo get_post_meta($postid, 'page_description', true);
 				wp_reset_query(); ?>
 			</p>
+			<?php get_search_form(); ?>
 			<ul class="archive-list">
 			    <?php wp_get_archives('type=postbypost&limit=10'); ?>
 			</ul>			
