@@ -96,8 +96,8 @@
   small { font-size: 85%; }
   a, a:visited { color: black; text-decoration: none; transition: background-color 0.2s ease; }
   .comment-date { display: inline-block; text-align: left; width: auto; }
-  blockquote, blockquote.left, blockquote.right { font-weight: 700; font-size: 1.2em; line-height: 1.5; padding: 0 0 0 15px; margin: 0; border-left: 5px solid; }
-  .wp-caption-text { max-width: 700px; font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif; font-style: normal; font-weight: 400; font-size: 0.85em; text-align: center; line-height: 1.3; padding: 0; margin: 10px auto 20px auto; }
+  blockquote, blockquote.left, blockquote.right { font-weight: 700; font-size: 1.2em; line-height: 1.5; padding: 0 0 0 5%; margin: 0; border-left: 10px solid; }
+  .wp-caption-text { max-width: 650px; font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif; font-style: normal; font-weight: 400; font-size: 0.75em; text-align: center; padding: 0; margin: 0 auto 5% auto; }
   dd { margin: 0; }
   textarea#comment { width: 100%; background-color: #f2f2f2; padding: 20px; }
   img.avatar > .avatar-40 > .photo { max-width: 40px !important; }
@@ -131,6 +131,7 @@
   .wp-smiley { margin: 0 !important; max-height: 1em; }
   .size-full, .size-large, .size-medium, .size-thumbnail { width: 100% !important; }
   img.avatar { border-radius: 300px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); }
+  .arve-embed-container { margin-bottom: 5%; }
   header, footer { margin: 0; background: #f2f2f2; }
   header { position: relative; overflow: hidden; text-align: center; margin: 0 auto; padding: 0; }
   .header-wrapper { display: block; margin: 0 auto; }
@@ -157,7 +158,7 @@
   article.comment { width: 100%; padding: 0; margin: 1em 0; }
   article.comment img { max-width: 40px; padding: 0; }
   .post-author { padding: 5% 0 0 0; border-top: 1px solid #e6e6e6; }
-  .gravatar { width: 35%; margin: 0 auto 3% auto; padding: 0; }
+  .gravatar { width: 35%; margin: 0 0 3% 0; padding: 0; }
   .author-text { display: block; }
   ul.archive-list { list-style: none; padding: 0; margin: 5% auto; text-align: center; font-size: 1.4em; font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; line-height: 1.2; }
   ul.archive-list > li > a { display: block; padding: 5%; margin: 0; border-bottom: 1px solid #e6e6e6; }
@@ -182,13 +183,13 @@
   .author-text { display: inline-block; width: 70%; font-size: 75%; } }
 @media screen and (min-width: 37.438em) { /*599px*/
   h1.logo { display: inline-block; float: left; width: 65%; text-align: left; }
-  h1.logo a { display: inline-block; padding: 1.8%; width: 100%; }
+  h1.logo a { display: inline-block; padding: 1.7%; width: 100%; }
   nav.menu-menu-container { display: inline-block; width: 35%; float: right; }
   ul.menu > li { width: 50%; }
   ul.menu > li > a { display: inline-block; } }
 @media screen and (min-width: 37.5em) { /*600px*/
-  body { font-size: 1.3em; } }
+  body { font-size: 1.2em; } }
 @media screen and (min-width: 50em) { /*800px*/
-  body { font-size: 1.5em; } }
+  body { font-size: 1.4em; } }
 @media screen and (min-width: 64.375em) { /*1030px*/ }
 @media screen and (min-width: 75em) { /*1200px*/ }
