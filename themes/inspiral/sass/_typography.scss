@@ -1,16 +1,16 @@
 body {
-	font-family: "garamond-premier-pro",serif;
+	font-family: $serif-font;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 1.3em;
-	line-height: 1.6;
-	color: rgb(80,80,80);
+	font-size: 1em;
+	line-height: 1.8;
+	color: rgb(0,0,0);
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $headline-font;
+	font-family: $sans-serif-font;
 	font-style: normal;
-	font-weight: 800;
+	font-weight: 700;
 	text-transform: uppercase;
 	line-height: 1;
 	letter-spacing: 1px;
@@ -20,47 +20,57 @@ h1, h2, h3, h4, h5, h6 {
 
 h1.logo {
 	position: relative;
-	float: left;
-	display: inline-block;
-	font-family: $headline-font;
+	float: none;
+	display: block;
+	font-family: $sans-serif-font;
 	font-style: normal;
-	font-weight: 800;
+	font-weight: 700;
 	font-size: 1.5em;
 	line-height: 1;
 	text-transform: uppercase;
 	margin: 0;
+	width: 100%;
+	text-align: center;
 }
 
 h1.logo a {
-	display: inline-block;
-	padding: 21px;
+	display: block;
+	padding: 3.25% 0;
+}
+
+h1.logo a:hover {
+	background: rgb(230,230,230);
+}
+
+span.sans-serif-logo {
+	font-family: $sans-serif-font;
+	text-transform: uppercase;
+	font-weight: 700;
 }
 
 h1 {
 	text-align: center;
-	margin: 40px 0 0.15em 0;
+	margin: 5% auto 3% auto;
 }
 
 h1.banner {
 	text-align: center;
-	font-size: 2.75em;
-	padding: 0 20px;
+	line-height: 1.2;
 	margin: 0 auto 0.5em auto;
 }
 
 h2.author-bio-title {
 	text-align: left;
-	font-size: 1em;
 	margin: 0.5em 0;
 	display: block;
 
 }
 
 .date {
-	font-size: 1.35em;
+	line-height: 1.2;
 	text-align: center;
 	font-style: italic;
-	margin: 0 auto 40px auto;
+	margin: 0 auto 20px auto;
 }
 
 section.banner p.date {
@@ -68,12 +78,11 @@ section.banner p.date {
 }
 
 h4.fname {
-	font-size: 1em;
 	font-weight: 400;
 }
 
 small {
-	font-size: 70%;
+	font-size: 85%;
 }
 
 a, a:visited {
@@ -89,22 +98,22 @@ a, a:visited {
 }
 
 blockquote, blockquote.left, blockquote.right {
-	font-style: italic;
 	font-weight: 700;
-	font-size: 1.3em;
+	font-size: 1.2em;
 	line-height: 1.5;
-	padding: 0 0 0 30px;
+	padding: 0 0 0 15px;
 	margin: 0;
-	border-left: 10px solid;
+	border-left: 5px solid;
 }
 
 .wp-caption-text {
-	font-family: $headline-font;
+	max-width: 700px;
+	font-family: $sans-serif-font;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 0.75em;
+	font-size: 0.85em;
 	text-align: center;
 	line-height: 1.3;
-	padding: 0 10%;
-	margin: 0.5em auto 2em auto;
+	padding: 0;
+	margin: 10px auto 20px auto;
 }

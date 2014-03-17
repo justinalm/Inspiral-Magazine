@@ -7,7 +7,7 @@ img {
 
 .entry-content img {
 	width: 100%;
-	margin: 0 0 1.5em 0;
+	margin: 0 0 20px 0;
 }
 
 .alignleft, img.alignleft {
@@ -41,7 +41,7 @@ img {
 	width: 100%!important;
 	border: 0 none;
 	padding: 0;
-	margin: 1em auto 0 auto;
+	margin: 0 auto;
 }
 
 .wp-caption {
@@ -67,5 +67,5 @@ img {
 
 img.avatar {
 	border-radius: 300px;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }

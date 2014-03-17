@@ -1,4 +1,7 @@
-$headline-font: "raleway", "Helvetica Neue", sans-serif;
+@media screen and (min-width: 20.000em) { /*320px*/
+
+$serif-font: "adobe-garamond-pro", Goergia, serif;
+$sans-serif-font: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 * {
 	box-sizing: border-box;
@@ -9,3 +12,65 @@ $headline-font: "raleway", "Helvetica Neue", sans-serif;
 @import "comments";
 @import "media";
 @import "structure";
+
+}
+
+@media screen and (min-width: 26.000em) { /*415px*/
+	.gravatar {
+		float: left;
+		width: 25%;
+		margin: 0 5% 5% 0;
+	}
+	.author-text {
+		display: inline-block;
+		width: 70%;
+		font-size: 75%;
+	}
+}
+
+@media screen and (min-width: 37.438em) { /*599px*/
+	h1.logo {
+		display: inline-block;
+		float: left;
+		width: 65%;
+		text-align: left;
+	}
+	h1.logo a {
+		display: inline-block;
+		padding: 1.8%;
+		width: 100%
+	}
+	nav.menu-menu-container {
+		display: inline-block;
+		width: 35%;
+		float: right;
+	}
+	ul.menu > li {
+		width: 50%;
+	}
+	ul.menu > li > a {
+		display: inline-block;
+	}
+
+}
+
+@media screen and (min-width: 37.500em) { /*600px*/
+	body {
+		font-size: 1.3em;
+	}
+}
+
+@media screen and (min-width: 50.000em) { /*800px*/
+	body {
+		font-size: 1.5em;
+	}
+
+}
+
+@media screen and (min-width: 64.375em){ /*1030px*/
+
+}
+
+@media screen and (min-width: 75.000em) { /*1200px*/
+
+}

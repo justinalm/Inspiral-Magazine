@@ -11,7 +11,7 @@
 </div> <!-- /#wrapper -->
 
 <footer>
-	<p><small>Copyright &copy; <?php echo date('Y'); ?> by <?php bloginfo( 'name' ); ?>.</small></p>
+	<p><small>Copyright &copy; <?php echo date('Y'); ?> by <span class="sans-serif-logo"><?php bloginfo( 'name' ); ?></span>.</small></p>
 </footer>
 
 <?php wp_footer(); ?>

@@ -21,7 +21,7 @@
 
         <section class="banner">
             <?php if(has_post_thumbnail()): ?>
-                <div class="post-banner" style="background-size: cover; background-image: url( 
+                <div class="post-banner" style="background-size: cover; background-position: center; background-image: url( 
                         <?php
                          $img_id = get_post_thumbnail_id();
                          $img_url = wp_get_attachment_image_src($img_id, true);
@@ -38,7 +38,7 @@
                         ?>
                         <small><?php printf( __( '· %2$s', 'starkers' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
                         <?php endif; ?>·</small><br>
-                    <?php the_excerpt(); ?></p>
+                        <?php the_excerpt(); ?>
                     </div>
                 </div>
             <?php else: ?>
@@ -53,16 +53,6 @@
                 <?php endif; ?>·</small></p>
             <?php endif ?>
         </section><!-- End of the Banner -->
-
-        <section>
-
-            <?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
-                <?php the_excerpt(); ?>
-            <?php else : ?>
-                <?php the_content( __( 'Continue reading &rarr;', 'starkers' ) ); ?>
-            <?php endif; ?>
-
-        </section>
 
 	</article>
  
