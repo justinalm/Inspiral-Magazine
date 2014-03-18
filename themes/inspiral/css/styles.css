@@ -81,7 +81,8 @@
   /* ========================================================================== Tables ========================================================================== */
   /** Remove most spacing between table cells. */
   table { border-collapse: collapse; border-spacing: 0; }
-  body { font-family: "adobe-garamond-pro", Goergia, serif; font-style: normal; font-weight: 400; font-size: 1em; line-height: 1.8; color: black; }
+  html { background: #f2f2f2; }
+  body { font-family: "adobe-garamond-pro", Goergia, serif; font-style: normal; font-weight: 400; font-size: 1em; line-height: 1.8; color: black; background: white; }
   h1, h2, h3, h4, h5, h6 { font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif; font-style: normal; font-weight: 700; text-transform: uppercase; line-height: 1; letter-spacing: 1px; margin: 0 0 0.15em 0; /* 400 for Normal Weight */ }
   h1.logo { position: relative; float: none; display: block; font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif; font-style: normal; font-weight: 700; font-size: 1.5em; line-height: 1; text-transform: uppercase; margin: 0; width: 100%; text-align: center; }
   h1.logo a { display: block; padding: 3.25% 0; }
@@ -174,7 +175,8 @@
   a.styled-button:hover, a.styled-button:active { background: #e6e6e6; }
   form.searchform { text-align: center; margin: 0 auto 5% auto; }
   label.screen-reader-text { display: block; }
-  input[type=text], input[type=url], input[type=tel], input[type=number], input[type=color], input[type=email] { background: #f2f2f2; padding: 0.5% 3%; }
+  input[type=text], input[type=url], input[type=tel], input[type=number], input[type=color], input[type=email] { background: #f2f2f2; padding: 0.5% 1%; }
+  input[type=submit] { padding: 0.5% 2%; background: #bbbbbb; }
   hr.rule { border: 0; height: 0; border-top: 0px solid #f2f2f2; border-bottom: 1px solid gainsboro; margin: 5% 0; }
   footer { padding: 3% 0; margin: 0 auto; }
   footer p { margin: 0 auto; } }
